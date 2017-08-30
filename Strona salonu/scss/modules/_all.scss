@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Upright:400,500|Nunito:400,400i,700');
+//font-family: 'Nunito', sans-serif;  -Content
+//font-family: 'Cormorant Upright', serif;  -Logo
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  background: linear-gradient(to top, #F787EF 38%,#00DCE5 100%);
+}
+
+@mixin main-container{
+  border: 2px solid white;
+  width: 100%;
+  height: 100%;
+  max-width: 1056px;
+  margin: 0 auto;
+  display: flex;
+  padding: 15px;
+}

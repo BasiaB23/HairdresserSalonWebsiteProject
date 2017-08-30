@@ -1,0 +1,26 @@
+@import url( 'https://fonts.googleapis.com/css?family=Cormorant+Upright:400,500|Nunito:400,400i,700');
+
+
+@media(min-width: 693px) {
+  .container {
+    h1 {
+      font-size: 10rem;
+    }
+  }
+
+  //Menu
+  
+  nav {
+    height: 45px;
+
+    .container {
+      ul {
+        li {
+          a {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

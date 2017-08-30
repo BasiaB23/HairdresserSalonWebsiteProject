@@ -1,0 +1,70 @@
+@import url( 'https://fonts.googleapis.com/css?family=Cormorant+Upright:400,500|Nunito:400,400i,700');
+
+header {
+  width: 100%;
+
+  .container {
+    @include main-container;
+    @media(min-width: 550px) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    h1 {
+      font-size: 8rem;
+    }
+
+    img {
+      display: flex;
+    }
+  }
+}
+//Menu
+//Menu
+@media(min-width: 550px) {
+  nav {
+    .container {
+      flex-direction: row;
+      padding: 0 3.5rem;
+      button {
+        display: none;
+      }
+
+      ul {
+        flex-direction: row;
+        display: flex;
+      }
+    }
+  }
+}
+
+//About Us
+
+.aboutUs {
+  h2 {
+    font-size: 4rem;
+  }
+
+  .articleBox {
+    @media(min-width: 565px) {
+      flex-direction: row;
+
+      &#rightSide {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .hairdresser {
+    flex-direction: column;
+    padding: 1.5rem 4rem;
+
+    h3 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}

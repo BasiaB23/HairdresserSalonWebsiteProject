@@ -1,0 +1,177 @@
+@import url( 'https://fonts.googleapis.com/css?family=Cormorant+Upright:400,500|Nunito:400,400i,700'); //Heder with logo
+
+header {
+  width: 100%;
+
+  .container {
+    @include main-container;
+    //background-color: rgba(247, 194, 255, 0.85);
+    height: 180px;
+    display: flex;
+    font-family: 'Cormorant Upright', serif;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    h1 {
+      color: $logoColor;
+      font-size: 3.2rem;
+    }
+
+    img {
+      display: none;
+    }
+  }
+}
+//Menu
+
+nav {
+  @include main-container;
+
+  &.open {
+    .container {
+      ul {
+        display: flex;
+      }
+    }
+  }
+  height: 35px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 4rem;
+
+    button {
+      display: flex;
+      border-radius: 8px;
+      font-size: 2rem;
+      color: $logoColor;
+      width: 20rem;
+      padding: 0 6.5rem;
+      background-color: $mainColor;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $mainColor;
+      }
+
+      &:active {
+        background-color: $mainColor;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+    }
+
+    ul {
+      flex-direction: column;
+      list-style: none;
+      display: none;
+      padding: 0;
+
+      li {
+        position: relative;
+        padding: 0.5rem 1.2rem;
+
+        &:before {
+          content: "";
+          background-image: url("../../images/noz.png");
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          background-size: contain;
+          top: -1%;
+          left: -5px;
+        }
+
+        a {
+          display: block;
+          font-size: 1.5rem;
+          padding: 0 1.5rem;
+          text-decoration: none;
+          color: $logoColor;
+        }
+      }
+    }
+  }
+}
+//About us section
+
+.aboutUs {
+  @include main-container;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito', sans-serif;
+
+
+  .articleBox {
+    display: flex;
+    padding: 1rem 5rem;
+    flex-direction: column;
+  }
+
+  .hairdresser {
+    flex-direction: column;
+    padding: 1.5rem 4rem;
+
+    h3 {
+      font-size: 3rem;
+      color: rgb(241, 237, 142);
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: rgb(48, 0, 85);
+      width: 50%;
+    }
+  }
+}
+
+//Gallery
+
+.gallerySection {
+  @include main-container;
+  display: flex;
+  flex-wrap: wrap;
+
+  #welcome {
+    font-size: 2rem;
+    //text-indent: 2rem;
+    color: rgb(48, 0, 85) ;
+    text-align: center;
+    padding: 2.5rem 0;
+    font-family: 'Nunito', sans-serif;
+
+    h2{
+        font-family: 'Cormorant Upright', serif;
+        font-size: 4rem;
+        color: $logoColor;
+        padding-bottom: 1rem;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    div{
+      padding: 1rem;
+
+      img{
+        border: 2px solid white;
+      }
+    }
+  }
+}
