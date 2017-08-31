@@ -8,7 +8,10 @@
 }
 html{
   font-size: 10px;
-  background: linear-gradient(to top, #F787EF 38%,#00DCE5 100%);
+  //background: linear-gradient(to top, #F787EF 38%,#00DCE5 100%);
+  //background: linear-gradient(to top, rgb(244, 156, 246) 38%,#00DCE5 100%);
+  background: linear-gradient(to top, rgb(246, 197, 227) 38%,#00DCE5 100%);
+
 }
 
 @mixin main-container{
