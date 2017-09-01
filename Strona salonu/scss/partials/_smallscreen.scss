@@ -26,158 +26,225 @@ header {
 //Menu
 
 nav {
-  
-    @include main-container;
+  @include main-container;
 
-    &.open {
-      .container {
-        display: flex;
-        flex-direction: column;
-
-
-        ul {
-          display: flex;
-        }
-      }
-    }
-    width: 100%;
-    background-color: white;
-    color: black;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-
+  &.open {
     .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-      box-sizing: border-box;
-      padding: 0 4rem;
-
-      button {
-        display: flex;
-        border-radius: 8px;
-        font-size: 2rem;
-        color: $logoColor;
-        width: 20rem;
-        padding: 0 6.5rem;
-        background-color: $mainColor;
-        outline: none;
-        cursor: pointer;
-
-        &:hover {
-          background-color: $mainColor;
-        }
-
-        &:active {
-          background-color: $mainColor;
-          box-shadow: 0 5px #666;
-          transform: translateY(4px);
-        }
-      }
-
       ul {
-        flex-direction: column;
-        list-style: none;
-        display: none;
-        padding: 0.5rem 0;
+        max-height: 300px;
+      }
+    }
+  }
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
 
-        li {
-          position: relative;
-          padding: 0.5rem 1.2rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 4rem;
+    flex-direction: column;
 
-          &:before {
-            content: "";
-            background-image: url("../../images/noz.png");
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            background-size: contain;
-            top: -1%;
-            left: -5px;
-          }
+    button {
+      display: flex;
+      border-radius: 8px;
+      font-size: 2rem;
+      color: $logoColor;
+      width: 20rem;
+      padding: 0 6.5rem;
+      background-color: $mainColor;
+      outline: none;
+      cursor: pointer;
 
-          a {
-            display: block;
-            font-size: 1.5rem;
-            padding: 0 1.5rem;
-            text-decoration: none;
-            color: $logoColor;
-          }
+      &:hover {
+        background-color: $mainColor;
+      }
+
+      &:active {
+        background-color: $mainColor;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+    }
+
+    ul {
+      flex-direction: column;
+      list-style: none;
+      max-height: 0;
+      margin: 1rem 0 0;
+      transition: all 0.5s ease-in-out;
+      overflow: hidden;
+      display: flex;
+
+      li {
+        position: relative;
+        padding: 0.5rem 1.2rem;
+
+        &:before {
+          content: "";
+          background-image: url("../../images/noz.png");
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          background-size: contain;
+          top: -1%;
+          left: -5px;
+        }
+
+        a {
+          display: block;
+          font-size: 1.5rem;
+          padding: 0 1.5rem;
+          text-decoration: none;
+          color: $logoColor;
         }
       }
     }
   }
-  //About us section
+}
+//About us section
 
-  .aboutUs {
-    @include main-container;
-    padding: 3rem 0;
+.aboutUs {
+  @include main-container;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito', sans-serif;
+
+  .articleBox {
     display: flex;
+    padding: 1rem;
     flex-direction: column;
-    font-family: 'Nunito', sans-serif;
 
-    .articleBox {
-      display: flex;
-      padding: 1rem;
-      flex-direction: column;
-
-      .photoHairdresser {
-        padding: 0 2rem;
-      }
-    }
-
-    .hairdresser {
-      flex-direction: column;
-      padding: 1.5rem 5rem 4rem;
-
-      h3 {
-        font-size: 3rem;
-        color: rgb(241, 237, 142);
-      }
-
-      p {
-        font-size: 1.5rem;
-        color: rgb(48, 0, 85);
-        width: 80%;
-      }
+    .photoHairdresser {
+      padding: 0 2rem;
     }
   }
-  //Gallery
 
-  .gallerySection {
-    @include main-container;
+  .hairdresser {
+    flex-direction: column;
+    padding: 1.5rem 5rem 4rem;
+
+    h3 {
+      font-size: 3rem;
+      color: rgb(241, 237, 142);
+    }
+
+    p {
+      font-size: 1.8rem;
+      color: rgb(48, 0, 85);
+      width: 80%;
+    }
+  }
+}
+//Gallery
+
+.gallerySection {
+  @include main-container;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  #welcome {
+    font-size: 2rem;
+    //text-indent: 2rem;
+    color: rgb(48, 0, 85);
+    text-align: center;
+    padding: 2.5rem 0;
+    font-family: 'Nunito', sans-serif;
+    max-width: 870px;
+
+    h2 {
+      font-family: 'Cormorant Upright', serif;
+      font-size: 4rem;
+      color: $logoColor;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .gallery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
-    #welcome {
-      font-size: 2rem;
-      //text-indent: 2rem;
-      color: rgb(48, 0, 85);
-      text-align: center;
-      padding: 2.5rem 0;
-      font-family: 'Nunito', sans-serif;
+    div {
+      padding: 1rem;
 
-      h2 {
-        font-family: 'Cormorant Upright', serif;
-        font-size: 4rem;
-        color: $logoColor;
-        padding-bottom: 1rem;
-      }
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      div {
-        padding: 1rem;
-
-        img {
-          border: 2px solid white;
-        }
+      img {
+        border: 2px solid white;
       }
     }
   }
+}
+//Price list
+.priceList {
+  @include main-container;
+  display: flex;
+  justify-content: center;
+  font-family: 'Cormorant Upright', serif;
+
+  article {
+    h3 {
+      font-size: 4rem;
+      //color: rgb(106, 13, 80);
+      color: rgb(154, 115, 52);
+    }
+
+    table {
+      font-size: 2rem;
+
+      th{
+        color: $logoColor;
+      }
+
+    }
+  }
+}
+//Contact
+.contact {
+  @include main-container;
+  padding: 1rem 5px;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    color: $logoColor;
+    font-family: 'Cormorant Upright', serif;
+
+    h3 {
+      font-size: 2.5rem;
+      padding-top: 1.2rem;
+    }
+
+    p {
+      padding: 1.2rem 0;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+}
+//Footer
+.foot {
+  @include main-container;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+
+  .copyright {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    align-self: flex-end;
+  }
+}
+
+.logo_bottom {
+  font-size: 18px;
+  color: grey;
+  text-transform: uppercase;
+}
